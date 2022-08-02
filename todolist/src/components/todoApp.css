@@ -1,0 +1,86 @@
+.container {
+    width: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.todoForm {
+    display: flex;
+    gap: 5px;
+}
+
+.todoInput {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(
+        #41414148,
+        #2e215e
+    );
+    border: none;
+    outline: none;
+    color: #f1f1f1;
+}
+
+
+.button {
+    background: #4850c4c9;
+    border: none;
+    border-radius: 50px 0 50px 0;
+    color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+.listContainer {
+    margin-top: 20px;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttonEdit {
+    background: #51237cc9;
+    border: none;
+    color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+.buttonEdit:hover, .buttonDelete:hover, .button:hover, .buttonUpdate:hover {
+    background: #363636c9;
+    cursor: pointer;
+}
+
+.buttonDelete {
+    background: #b31c1cc9;
+    border: none;
+    color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+.buttonUpdate {
+    margin-top: 10px;
+    background: #4850c4c9;
+    border: none;
+    border-radius: 50px 0 50px 0;
+    color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+.todoInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todoTitle {
+    flex: 1;
+    font-size: 30px;
+}
+
+.todo {
+    padding: 2px;
+    margin: 5px 0;
+}
