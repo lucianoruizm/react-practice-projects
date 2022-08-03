@@ -6,7 +6,7 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 15px;
     outline: none;
     color: #f1f1f1;
     /* From https://css.glass */
@@ -16,4 +16,8 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(200, 196, 196, 0.21);
+}
+
+input::placeholder{
+    color: #f1f1f185;
 }
