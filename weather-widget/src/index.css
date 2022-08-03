@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Plus+Jakarta+Sans:wght@200&family=Roboto&family=Roboto+Condensed&family=Scada&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Scada', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url(../public/cityWeatherDalle.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #f1f1f1;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }

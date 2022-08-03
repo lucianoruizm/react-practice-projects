@@ -1,0 +1,15 @@
+.container {
+    margin: 10px 0;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(79, 81, 82, 0.701) 0%, rgba(91, 94, 98, 0.438) 57%, rgba(43,67,87,0.5354516806722689) 100%);
+    color: #f1f1f1;
+}
