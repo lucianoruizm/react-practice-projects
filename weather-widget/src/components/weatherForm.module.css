@@ -7,9 +7,13 @@
     padding: 10px;
     box-sizing: border-box;
     font-size: 18px;
-    border: none;
     outline: none;
-    border-radius: 3px;
-    background: linear-gradient(90deg, rgba(79, 81, 82, 0.701) 0%, rgba(91, 94, 98, 0.438) 57%, rgba(43,67,87,0.5354516806722689) 100%);
     color: #f1f1f1;
+    /* From https://css.glass */
+    background: rgba(200, 196, 196, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(200, 196, 196, 0.21);
 }

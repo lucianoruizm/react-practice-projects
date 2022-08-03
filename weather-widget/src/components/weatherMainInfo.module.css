@@ -1,8 +1,13 @@
 .mainInfo {
-    background: linear-gradient(90deg, rgba(55,86,94,0.700717787114846) 0%, rgba(91,94,98,0.42620798319327735) 57%, rgba(43,67,87,0.5354516806722689) 100%);
     padding: 30px 40px 40px;
-    border-radius: 5px;
     box-sizing: border-box;
+    /* From https://css.glass */
+    background: rgba(200, 196, 196, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(200, 196, 196, 0.21);
 }
 
 .city {
