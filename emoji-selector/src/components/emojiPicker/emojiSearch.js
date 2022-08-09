@@ -11,6 +11,6 @@ export default function EmojiSearch({onSearch}){
     }
 
     return (
-        <input className={styles.search} type='text' onChange={handleChange} value={value} />
+        <input className={styles.search} placeholder="Search for emoji..." type='text' onChange={handleChange} value={value} />
     )
 }

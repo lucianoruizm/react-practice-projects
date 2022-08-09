@@ -1,27 +1,47 @@
 .inputContainer {
-    display: inline-flex;
+    display: inline;
     position: relative;
 }
-  
+
+.emojiInput {
+    margin: 40px 0 0 50px;
+    min-width: 15em;
+    min-height: 2em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    opacity: 0.86;
+    background: linear-gradient(0deg, #FFFFFF 0%, #EFEFEF 48%, #FFFFFF 100%);
+}
+
+.emojiInput:focus {
+    border: 2px double #242323b6;
+}
+
 .emojiPickerContainer {
     position: absolute;
-    width: 400px;
-    height: 350px;
+    max-width: 400px;
+    max-height: 350px;
     border: solid 1px white;
     background-color: #222;
+    opacity: 0.86;
     display: flex;
     flex-direction: column;
     padding: 15px;
     box-sizing: border-box;
-    top: 20px;
+    top: 30px;
     border-radius: 5px;
+    margin-left: 50px;
 }
   
 .emojiPickerButton {
+    position: absolute;
+    margin-top: 30px;
     display: inline-block;
     background: transparent;
     border: none;
     cursor: pointer;
+    font-size: 1.8em;
 }
   
 .emojisList {
@@ -51,4 +71,11 @@
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    outline: none;
+    opacity: 0.86;
+    background: linear-gradient(0deg, #FFFFFF 0%, #EFEFEF 48%, #FFFFFF 100%);
+}
+
+.search:focus {
+    border: 2px double #242323b6;
 }

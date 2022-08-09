@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import EmojiPicker from "./emojiPicker";
+import styles from "./emojiPicker.module.scss";
 
 export default function EmojiPickerInput(){
     
@@ -11,7 +12,7 @@ export default function EmojiPickerInput(){
 
     return (
         <div>
-            <input ref={refInput} />
+            <input className={styles.emojiInput} placeholder="Write your text here..." ref={refInput} />
             {/* <button onClick={handleClick}>Click</button> */}
             <EmojiPicker ref={refInput}/>
         </div>
