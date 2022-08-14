@@ -1,2 +1,5 @@
 Se instalo react-router-dom ---> npm i react-router-dom @6 
   @6 ---> Hace referencia a la versión 6
+
+Se utiliza el hook useContext
+

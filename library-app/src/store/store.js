@@ -1,12 +1,13 @@
 // Store generalmente se le da como nombre a la carpeta que contiene
 // los archivos que permitan manejar el estado de la aplicación, es decir, un estado de forma global
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useState } from "react"
 
 const AppContext = createContext({
     items: [],
     createItem: (item) =>{},
     getItem: (id) => {},
-    updateItem: (item) => {}
+    updateItem: (item) => {},
+    deleteItem: (item) => {},
 });
 
 export default function Store({children}){
@@ -32,6 +33,12 @@ export default function Store({children}){
         temp[index] = { ...item};
     }
 
+    function deleteItem(id){
+        const item = items.filter(item => item.id !== id)
+
+        return item;
+    }
+
     return (
         <AppContext.Provider
           value={{
@@ -39,6 +46,7 @@ export default function Store({children}){
               createItem,
               getItem,
               updateItem,
+              deleteItem,
           }}
         >
           {children}

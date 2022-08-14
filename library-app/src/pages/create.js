@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Layout from '../components/layout';
 import { useAppContext } from '../store/store';
 
@@ -11,6 +12,41 @@ export default function Create(){
     const [review, setReview] = useState("")
 
     const store = useAppContext();
+    const navigate = useNavigate();
+
+    const inputStyles = {
+        formContainer: {
+          width: "400px",
+          margin: "0 auto",
+        },
+        container: {
+          display: "flex",
+          flexDirection: "column",
+          gap: "5px",
+          margin: "15px 0",
+        },
+        title: {
+          fontSize: "16px",
+          textAlign: "left",
+          color: "#f1f1f1"
+        },
+        input: {
+          padding: "10px",
+          borderRadius: "5px",
+          fontSize: "16px",
+        },
+      };
+
+    const buttonStyle = {
+        padding: "15px 20px",
+        minWidth: "200px",
+        border: "none",
+        borderRadius: "5px",
+        background: "#1e9638",
+        color: "f1f1f1",
+        fontWeight: "bolder",
+        fontSize: "18px",
+    }
 
     function handleChange(e){
         const name = e.target.name;
@@ -63,15 +99,16 @@ export default function Create(){
         }
 
         store.createItem(newBook);  // Al importar useAppContext se habilitan las funciones createItem, getItem y updateItem.
-
+        navigate("/"); // Con esta función y el parametro dado se enviará a la página Home una vez cargado un libro
     }
 
     return (
         <Layout>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <div>Title</div>
-                    <input 
+            <form onSubmit={handleSubmit} style={inputStyles.formContainer}>
+                <div style={inputStyles.container}>
+                    <div style={inputStyles.title}>Title</div>
+                    <input
+                     style={inputStyles.input} 
                      type="text" 
                      name="title" 
                      onChange={handleChange} 
@@ -79,9 +116,10 @@ export default function Create(){
                     />
                 </div>
 
-                <div>
-                    <div>Author</div>
-                    <input 
+                <div style={inputStyles.container}>
+                    <div style={inputStyles.title}>Author</div>
+                    <input
+                     style={inputStyles.input} 
                      type="text" 
                      name="author" 
                      onChange={handleChange} 
@@ -89,9 +127,9 @@ export default function Create(){
                     />
                 </div>
 
-                <div>
-                    <div>Cover</div>
-                    <input 
+                <div style={inputStyles.container}>
+                    <div style={inputStyles.title}>Cover</div>
+                    <input
                      type="file" 
                      name="cover" 
                      onChange={handleOnChangeFile}
@@ -99,9 +137,10 @@ export default function Create(){
                     <div>{ !!cover ? <img src={cover} width="200" /> : ""} </div> {/* Si cover tiene contenido se cargara imagen sino quedara vacio */}
                 </div>
 
-                <div>
-                    <div>Introduction</div>
-                    <input 
+                <div style={inputStyles.container}>
+                    <div style={inputStyles.title}>Introduction</div>
+                    <input
+                     style={inputStyles.input} 
                      type="text" 
                      name="intro" 
                      onChange={handleChange} 
@@ -110,8 +149,8 @@ export default function Create(){
                 </div>
 
                 <div>
-                    <div>Completed</div>
-                    <input 
+                    <div style={inputStyles.title}>Completed</div>
+                    <input
                      type="checkbox" 
                      name="completed" 
                      onChange={handleChange} 
@@ -119,16 +158,17 @@ export default function Create(){
                     />
                 </div>
 
-                <div>
-                    <div>Review</div>
-                    <input 
+                <div style={inputStyles.container}>
+                    <div style={inputStyles.title}>Review</div>
+                    <input
+                     style={inputStyles.input}
                      type="text" 
                      name="review" 
                      onChange={handleChange} 
                      value={review}
                     />
                 </div>
-                <input type="submit" value="Register book"/>
+                <input style={buttonStyle} type="submit" value="Register book"/>
             </form>
         </Layout>
     )
