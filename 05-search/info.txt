@@ -1,0 +1,2 @@
+Para los estilos de instalo Styled-Components
+  ----> npm i -D styled-components
